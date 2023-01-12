@@ -76,12 +76,13 @@ def get_places_df(url_query):
         
         for place_id in place_ids:
             dparams = {
-                'key': 'AIzaSyDIKu79D9uptTLQf3PMhAUIiwIVrXFoNRg',
+                'key': 'AIzaSyCCaG6X7lEF-S_2jF1NW1asdoYrAhcakd0',
                 'placeid': place_id,
                 'language': 'en'
             }
             r = requests.get(place_details_endpoint, params=dparams)
-            r = r.json()  # See what we got
+            r = r.json() 
+            st.write(r) # See what we got
             r = r['result']
             
             try:
