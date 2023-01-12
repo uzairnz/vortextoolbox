@@ -81,8 +81,7 @@ def get_places_df(url_query):
                 'language': 'en'
             }
             r = requests.get(place_details_endpoint, params=dparams)
-            r = r.json() 
-            st.write(r) # See what we got
+            r = r.json() # See what we got
             r = r['result']
             
             try:
